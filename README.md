@@ -13,6 +13,7 @@ $ npm install
 ```
   Automaticamente irá instalar todos os modulos usado neste exemplo
 
+### Qual banco foi usado ?
   - Será necessário a instalação do MongoDB
     
     Para [Ubuntu 16](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)  
@@ -46,10 +47,51 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
           
             - De Route para o Controller
           
-            - Do Controller para o Banco MongoDB
+            - Do Controller (usando uma Model) para o Banco MongoDB
           
       - As regras de negócio você vai encontrar no Controller
-      
+
+### Que modulos há neste projeto ?
+  - bcrypt-nodejs: Criptografar senhas
+  
+  - body-parser: Usado para formulários
+  
+  - cookie-parser: Para cookies
+  
+  - debug: Para debug 
+    
+  - express: Framework para nosso app web
+  
+  - express-flash: Mensagens na tela
+  
+  - express-load: Carregamento de todos os controllers , routes e models
+  
+  - jade: Template das telas
+  
+  - moment: Formatadpr de data
+  
+  - mongoose: Comandos para o BD
+  
+  - morgan: Para log
+  
+  - serve-favicon: Para o icone na guia
+  
+  - session: Para senha
+  
+### Algo que vale ressaltar ?
+  - Sim ! Durante o estudo achei bem interessante o uso do nodemon, que faz com que não precisamos parar nossa aplicação, ele da um restart nela no comando do ctrl + s e do express-load que carrega nossos controllers , models e routes.
+  
+  - Linha que carrega os arquivos, ja setando quem sera a pagina inicial e assim por diante.
+    - a pagina inicial é setada em quem tiver como route o caminho `('/')`
+     
+      ```sh
+        load('models').then('controllers').then('routes').into(app);
+      ```
+  
+  
+  
+
+
 ### Por fim ...
   - Para executar a aplicação, em seu console sempre mande o comando nodemon 
   - Exemplo:
