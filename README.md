@@ -1,9 +1,10 @@
 # EstudoNodeJs
 Estudo NodeJs - Estrutura MVC Básica 
 
-> Estudo projeto foi criado para auxiliar no estudo deNodeJs
-> Ele não tem validações ou algo do tipo. É apenas um fluxo básico ( da url ao banco )
-> Na Issues você pode acompanhar o que esta pendendo e pode ser feito.
+> Estudo projeto foi criado para auxiliar no estudo de NodeJs
+
+> Ele não tem validações ou algo do tipo, é apenas um fluxo básico ( da url ao banco )
+
 
 ### Como começar ?
   - Execute este comando no terminal dentro da pasta aonde se encontra o arquivo `package.json`
@@ -38,9 +39,13 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   - Neste exemplo só ha dois itens: Home e Usuarios
       - Home: Pagina inical sem segredos
       - Usuarios: 
+      
           Em Usuarios nós vamos da requisiçaõ via http para Route
+          
           De Route para o Controller
+          
           Do Controller para o Banco MongoDB
+          
       - As regras de negócio você vai encontrar no Controller
   
 
