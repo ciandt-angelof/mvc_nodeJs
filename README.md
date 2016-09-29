@@ -28,6 +28,7 @@ $ npm install
     Comandos do [MongoDB](http://imasters.com.br/artigo/20828/mongodb/como-usar-o-console-do-mongodb?trace=1519021197&source=single)
     
   - Neste exemplo dei o nome do banco de ***MVC*** , as configurações você pode acompanhar no arquivo `app.js`
+  - Não há usuario e nem senha
     
 ```sh    
 load('models').then('controllers').then('routes').into(app);
