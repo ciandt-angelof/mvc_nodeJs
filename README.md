@@ -20,9 +20,8 @@ $ npm install
   - Comandos do [MongoDB](http://imasters.com.br/artigo/20828/mongodb/como-usar-o-console-do-mongodb?trace=1519021197&source=single)
     
     Neste exemplo dei o nome do banco de MVC , as configurações você pode acompanhar no arquivo `app.js`
+    
 ```sh    
-//so pode ser executado se o express-load estiver instalado
-//deve estar antes da inicialização do app
 load('models').then('controllers').then('routes').into(app);
 
 // Conexao com o MongoDB
@@ -35,3 +34,10 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   }
 })
 ```
+  - Algumas partes do código estão com comentários para explicar melhor o que cada item faz ou como funciona.
+  
+  - Neste exemplo só ha dois itens: Home e Usuarios
+      - Home: Pagina inical sem segredos
+      - Usuarios: Nele você consegue acompanhar sua chamada, passando para a Route, da Route para o Controller e por fim fazendo as chamas com o Mongo.
+  
+
