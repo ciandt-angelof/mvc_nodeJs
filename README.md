@@ -1,10 +1,11 @@
 # EstudoNodeJs
 Estudo NodeJs - Estrutura MVC Básica 
 
-> Estudo projeto foi criado para auxiliar no estudo de NodeJs
+> Este projeto foi criado para auxiliar no estudo de NodeJs
 
 > Ele não tem validações ou algo do tipo, é apenas um fluxo básico ( da url ao banco )
 
+> Não se preocupe com os layouts nele , se caso você tiver dúvida de como foi colocado vá na pasta `public`. Usei o [Bootstrap](http://getbootstrap.com/)
 
 ### Como começar ?
   - Execute este comando no terminal dentro da pasta aonde se encontra o arquivo `package.json`
@@ -79,14 +80,18 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   - session: Para senha
   
 ### Algo que vale ressaltar ?
-  - Sim ! Durante o estudo achei bem interessante o uso do nodemon, que faz com que não precisamos parar nossa aplicação, ele da um restart nela no comando do ctrl + s e do express-load que carrega nossos controllers , models e routes.
+  - Sim ! 
+  - Durante o estudo achei bem interessante o uso do nodemon, que faz com que não precisamos parar nossa aplicação, ele da um restart já no comando do ctrl + s 
+  - E do express-load que carrega nossos controllers , models e routes.
   
-  - Linha que carrega os arquivos, ja setando quem sera a pagina inicial e assim por diante.
-    - a pagina inicial é setada em quem tiver como route o caminho `('/')`
+  - Linha de código que carrega os arquivos, ja setando quem sera a pagina inicial e assim por diante. ---> `app.js`
+    
      
       ```sh
         load('models').then('controllers').then('routes').into(app);
       ```
+      
+      - a pagina inicial é setada em quem tiver como route o caminho `('/')`
   
   
   
