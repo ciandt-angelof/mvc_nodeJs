@@ -2,9 +2,12 @@
 Estudo NodeJs - Estrutura MVC Básica 
 
 ## Sobre o projeto
-  *A ideia é compartilhar o conhecimento, talvez em algumas parte do projeto você encontre algum comentário ou código que podem não estar bem explicado. Se isso acontecer por favor mostre nos o caminho !*
-
+ 
 > Este projeto foi criado para auxiliar no estudo de NodeJs
+
+> Talvez em algum momento você possa achar algum código confuso , me pergunte e vou explicar o por que usei aquilo
+
+> Se caso você tiver uma melhor solução, mostre pro time, assim todos vão aprender da maneira correta :)
 
 > Ele não tem validações ou algo do tipo, é apenas um fluxo básico ( da url ao banco )
 
