@@ -110,6 +110,7 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
       
       ```sh
         $ nodemon app.js
-      ```
+      ``` 
+  - chame essa URL: https://localhost:3000
   
 
