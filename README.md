@@ -49,5 +49,13 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
             - Do Controller para o Banco MongoDB
           
       - As regras de negócio você vai encontrar no Controller
+      
+### Por fim ...
+  - Para executar a aplicação, em seu console sempre mande o comando nodemon 
+  - Exemplo:
+      
+      ```sh
+        $ nodemon app.js
+      ```
   
 
