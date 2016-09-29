@@ -16,10 +16,9 @@ $ npm install
     
     Para [Ubuntu 16](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04)   
     Para [Ubuntu 14](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-14-04)
+    Comandos do [MongoDB](http://imasters.com.br/artigo/20828/mongodb/como-usar-o-console-do-mongodb?trace=1519021197&source=single)
     
-  - Comandos do [MongoDB](http://imasters.com.br/artigo/20828/mongodb/como-usar-o-console-do-mongodb?trace=1519021197&source=single)
-    
-    Neste exemplo dei o nome do banco de MVC , as configurações você pode acompanhar no arquivo `app.js`
+  - Neste exemplo dei o nome do banco de ***MVC*** , as configurações você pode acompanhar no arquivo `app.js`
     
 ```sh    
 load('models').then('controllers').then('routes').into(app);
@@ -38,6 +37,10 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   
   - Neste exemplo só ha dois itens: Home e Usuarios
       - Home: Pagina inical sem segredos
-      - Usuarios: Nele você consegue acompanhar sua chamada, passando para a Route, da Route para o Controller e por fim fazendo as chamas com o Mongo.
+      - Usuarios: 
+          Em Usuarios nós vamos da requisiçaõ via http para Route
+          De Route para o Controller
+          Do Controller para o Banco MongoDB
+      - As regras de negócio você vai encontrar no Controller
   
 
