@@ -5,7 +5,11 @@ Estudo NodeJs - Estrutura MVC Básica
 
 > Ele não tem validações ou algo do tipo, é apenas um fluxo básico ( da url ao banco )
 
-> Não se preocupe com os layouts nele , se caso você tiver dúvida de como foi colocado vá na pasta `public`. Usei o [Bootstrap](http://getbootstrap.com/)
+> Não se preocupe com os layouts nele , se caso você tiver dúvida de como foi colocado vá na pasta `public`. 
+
+> Ele já esta SALVANDO / EDITANDO / BUSCANDO / DELETANDO
+
+> Usei o [Bootstrap](http://getbootstrap.com/) como template.
 
 ### Como começar ?
   - Execute este comando no terminal dentro da pasta aonde se encontra o arquivo `package.json`
