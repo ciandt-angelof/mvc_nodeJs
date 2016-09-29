@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 Cadastro de Usuarios
+    hr
+    br
+    //- if messages.erro
+    //-     div(class="alert alert-danger")
+    //-         p #{messages.erro}
+    //-     br
+    //- if messages.info
+    //-     div(class="alert alert-sucess")
+    //-         p #{messages.info}
+    //-     br        
+    form(method="POST",action="/usuarios/create",role="form")
+        div(class="form-group")
+            label Nome
+            input(type="text", class="form-control",name="nome", palceholder="Nome", autofocus)
+        div(class="form-group")
+            label Email
+            input(type="email", class="form-control",name="email", palceholder="E-mail")
+        div(class="form-group")
+            label Site
+            input(type="text", class="form-control",name="site", palceholder="Site")
+        div(class="form-group")
+            label Senha
+            input(type="password", class="form-control",name="password", palceholder="Senha")
+        div(class="form-group")
+            label Confirmar Senha
+            input(type="password", class="form-control",name="password_confirmar", palceholder="Confirmar Senha")
+
+        button(type="submit", class="btn btn-success") Salvar
