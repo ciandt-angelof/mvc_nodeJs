@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 #{dados.nome}
+    p
+    p
+        b E-mail: #{dados.email}
+        p
+        b ID: #{dados._id}
+        p
+        b Data: #{moment(dados.data_cad).format('DD/MM/YYYY HH:MM:ss')}
+        //- b E-mail: #{dados.email}
+        //- b E-mail: #{dados.email}
+        br
+        br
+        br
+        form(method="POST",action="/usuario/delete/#{dados._id}",role="form", id="excluir-form")
+            button(type="submit", class="btn btn-danger") Excluir
+            span &nbsp; 
+            a(href="/usuario" class="btn btn-primary") Voltar
+
+
+block scripts 
+    script(type="text/javascript").
+        $(function(){
+            $('#excluir-form').submit(function(){
+                var pergunta = confirm('Deseja realmente excluir o usuário ?');
+                if(!pergunta){
+                    return false;
+                }
+            });
+        });

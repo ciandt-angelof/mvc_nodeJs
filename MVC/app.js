@@ -1,17 +1,21 @@
 //Imports dos modulos 
-var express       = require('express');
-var path          = require('path');
-var favicon       = require('serve-favicon');
-var logger        = require('morgan');
-var cookieParser  = require('cookie-parser');
-var bodyParser    = require('body-parser');
-var load          = require('express-load');
-var mongoose      = require('mongoose');
-var flash         = require('express-flash');
-var session       = require('session');
-var moment        = require('moment'); 
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var load = require('express-load');
+var mongoose = require('mongoose').set('debug', true);
+var session = require('express-session');
+var moment = require('moment');
+var flash = require('flash');
+var expressValidator = require('express-validator');
 
 var app = express();
+
+//middleware
+var erros = require('./middleware/erros');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,15 +24,32 @@ app.set('view engine', 'jade');
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(expressValidator());
 app.use(cookieParser());
+//Remove o warning de deprecated do express-session ---> resave: true e ---> saveUninitialized: true
+app.use(session({
+  secret: 'superSecret',
+  resave: true,
+  saveUninitialized: true
+}));
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(flash());
+app.use(flash());
+
 
 //helpers
+app.use(function (req, res, next) {
+  res.locals.session = req.session.usuario;
+  res.locals.isLogged = req.session.usuario ? true : false;
+  res.locals.moment = moment;
+  next();
+});
+
 //isto faz com que o modulo moment fique disponivel para todo o projeto
 //fonte: http://stackoverflow.com/questions/12794860/how-to-use-node-modules-like-momentjs-in-ejs-views
-app.locals.moment = moment; 
+app.locals.moment = moment;
 
 //so pode ser executado se o express-load estiver instalado
 //deve estar antes da inicialização do app
@@ -36,10 +57,10 @@ load('models').then('controllers').then('routes').into(app);
 
 // Conexao com o MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/MVC', function(err){
-  if(err){
+mongoose.connect('mongodb://localhost/MVC', function (err) {
+  if (err) {
     console.log("Erro ao conectar ao banco: " + err)
-  }else{
+  } else {
     console.log("Conexão estabelecida com sucesso !")
   }
 })

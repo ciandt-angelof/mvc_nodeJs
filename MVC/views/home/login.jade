@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    form(method="POST", action="/", class="form-login")
+        h3 Entrar no Sistema
+        p Informe os dados para acessar
+        br
+        div(class="form-group")
+            label E-mail
+            input(type="email", class="form-control", placeholder="E-mail", name="email", autofocus, required)
+        br
+        div(class="form-group")
+            label Senha
+            input(type="password", class="form-control", placeholder="Senha", name="password", required)
+        br
+        button(type="submit", class="btn btn-primary btn-block") Entrar

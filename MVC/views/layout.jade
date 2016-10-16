@@ -11,12 +11,14 @@ html
     
   body
     div(class="container")
-      div(class="masthead")
-        h3(class="text-muted") Estudo de NodeJS - CI&T
-        include partials/menu
+      if isLogged
+        div(class="masthead")
+          h3(class="text-muted") Estudo de NodeJS - CI&T
+          include partials/menu
     block content
     <!--isto serve comentar uma linha-->
-    include partials/footer   
+    if isLogged
+      include partials/footer   
 
     script(src="/js/jquery.min.js")
     script(src="/js/bootstrap.min.js")
