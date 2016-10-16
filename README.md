@@ -102,7 +102,12 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   
   
   
-
+### Não tenho um cadastro e agora ?!
+ - Segue um email e senha padrão ;)
+```sh
+        email: admin@admin.com
+        senha: admin123
+```  
 
 ### Por fim ...
   - Para executar a aplicação, em seu console sempre mande o comando nodemon 
