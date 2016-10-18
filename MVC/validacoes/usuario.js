@@ -1,12 +1,8 @@
 var url = require('url');
 
-
 module.exports = function (req, res) {
     var createUrl = url.parse(req.url).pathname == "/usuario/create";
     var updateUrl = !createUrl;
-
-    // console.log(url.parse(req.url).pathname);
-    // console.log("createURL: ---> " + createUrl);
 
     req.assert('nome', 'Informe seu Nome').notEmpty();
 

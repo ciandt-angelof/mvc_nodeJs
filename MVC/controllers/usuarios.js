@@ -7,7 +7,6 @@ module.exports = function (app) {
         index: function (req, res) {
             Usuario.find(function (err, dados) {
                 if (err) {
-                    //req.flash('erro', 'Erro ao buscar os usuários: ' + err);
                     console.log(" ");
                     console.log("Erro ao buscar os usuários !");
                     console.log(" ");

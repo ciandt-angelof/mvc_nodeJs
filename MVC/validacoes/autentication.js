@@ -10,8 +10,8 @@ module.exports = function (req, res) {
 
     var validateErros = req.validationErrors() || [];
 
-
     if (validateErros.length > 0) {
+        
         validateErros.forEach(function (e) {
             req.flash('erro', e.msg);
         });
@@ -23,7 +23,9 @@ module.exports = function (req, res) {
         }
 
         return false;
+        
     }
+    
     return true;
 
 }
