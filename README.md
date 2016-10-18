@@ -14,11 +14,11 @@ Estudo NodeJs - Estrutura MVC Básica
 > Usei o [Bootstrap](http://getbootstrap.com/) como template.
 
 ### Como começar ?
-  - Execute este comando no terminal dentro da pasta aonde se encontra o arquivo `package.json`
-```sh
-$ npm install
-```
-  Automaticamente irá instalar todos os modulos usado neste exemplo
+  - Execute no terminal dentro da pasta aonde se encontra o arquivo `package.json`
+  ```sh
+  $ npm install
+  ```
+  Automaticamente irá instalar todas as dependencias do projeto
 
 ### Qual banco foi usado ?
   - Será necessário a instalação do MongoDB
@@ -32,7 +32,7 @@ $ npm install
   - Neste exemplo dei o nome do banco de ***MVC*** , as configurações você pode acompanhar no arquivo `app.js`
   - Não há usuario e nem senha
     
-```sh    
+```javascript    
 load('models').then('controllers').then('routes').into(app);
 
 // Conexao com o MongoDB
@@ -47,7 +47,7 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
 ```
   - Algumas partes do código estão com comentários para explicar melhor o que cada item faz ou como funciona.
   
-  - Neste exemplo só ha dois itens: Home e Usuarios
+  - Neste exemplo só ha dois itens: Home e Usuários
       - Home: Pagina inical sem segredos
       - Usuarios: 
       
@@ -93,14 +93,11 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
   
   - Linha de código que carrega os arquivos, ja setando quem sera a pagina inicial e assim por diante. ---> `app.js`
     
-     
       ```sh
         load('models').then('controllers').then('routes').into(app);
       ```
       
-      - a pagina inicial é setada em quem tiver como route o caminho `('/')`
-  
-  
+      - A pagina inicial é setada em quem tiver como route o caminho `('/')`
   
 ### Não tenho um cadastro e agora ?!
  - Segue um email e senha padrão ;)
@@ -116,6 +113,6 @@ mongoose.connect('mongodb://localhost/MVC', function(err){
       ```sh
         $ nodemon app.js
       ``` 
-  - chame essa URL: https://localhost:3000
+  - Chame essa URL: https://localhost:3000
   
 
