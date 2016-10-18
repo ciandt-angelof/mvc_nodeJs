@@ -9,7 +9,6 @@ module.exports = function (app) {
         index: function (req, res) {
             Usuario.find(function (err, dados) {
                 if (err) {
-                    //req.flash('erro', 'Erro ao buscar os usuários: ' + err);
                     console.log(" ");
                     console.log("Erro ao buscar os usuários !");
                     console.log(" ");
@@ -73,7 +72,7 @@ module.exports = function (app) {
                             if (err) {
                                 req.flash('erro', 'Erro ao cadastrar usuario: ' + err);
                                 console.log("ERRO AO SALVAR USUARIO")
-                                    // este render devolve os dados digitados na tela se casou houver um erro na hora de salvar
+                                // este render devolve os dados digitados na tela se casou houver um erro na hora de salvar
                                 res.render('usuario/create', {
                                     user: req.body
                                 });
