@@ -1,4 +1,4 @@
-# EstudoNodeJs
+# MVC - NodeJS
 Estudo NodeJs - Estrutura MVC Básica 
 
 ## Sobre o projeto
